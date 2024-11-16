@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 300px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            margin: 5px 1%;
+        }
+        .credit {
+            background-color: #4CAF50;
+        }
+        .debit {
+            background-color: #f44336;
+        }
+        .balance {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank App</h1>
+        <input type="number" id="amount" placeholder="Enter Transaction Amount">
+        <div>
+            <button class="credit" onclick="credit()">Credit</button>
+            <button class="debit" onclick="debit()">Debit</button>
+        </div>
+        <div class="balance">
+            Your Account Balance is : Rs.<span id="balance">0</span>
+        </div>
+    </div>
+
+    <script>
+        let balance = 0;
+
+        function credit() {
+            let amount = parseFloat(document.getElementById("amount").value);
+            if (!isNaN(amount) && amount > 0) {
+                balance += amount;
+                updateBalance();
+            } else {
+                alert("Please enter a valid amount");
+            }
+        }
+
+        function debit() {
+            let amount = parseFloat(document.getElementById("amount").value);
+            if (!isNaN(amount) && amount > 0) {
+                if (balance >= amount) {
+                    balance -= amount;
+                    updateBalance();
+                } else {
+                    alert("Insufficient balance");
+                }
+            } else {
+                alert("Please enter a valid amount");
+            }
+        }
+
+        function updateBalance() {
+            document.getElementById("balance").textContent = balance.toFixed(2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2f2f5a; /* Background color similar to your design */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .social-media-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #2f2f5a;
+            border-radius: 10px;
+            width: 400px;
+        }
+        .social-media-container h2 {
+            color: #ffcc00;
+            font-size: 1rem;
+        }
+        .social-media-container h3 {
+            font-size: 1.5rem;
+            margin: 10px 0 20px;
+        }
+        .social-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .social-buttons a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid #3c3c6c;
+        }
+        .social-buttons a:hover {
+            background-color: #3c3c6c;
+        }
+        .social-buttons a.email {
+            background-color: #ffcc00;
+            color: #2f2f5a;
+            border-color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="social-media-container">
+        <h2>Social Media</h2>
+        <h3>Let's be friends</h3>
+        <div class="social-buttons">
+            <a href="#" target="_blank">
+                LinkedIn
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="20">
+            </a>
+            <a href="#" target="_blank">
+                Github
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="20">
+            </a>
+            <a href="#" target="_blank">
+                Youtube
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="20">
+            </a>
+            <a href="#" class="email" target="_blank">
+                Email
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" width="20">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
