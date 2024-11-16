@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Email Validation</h2> 
+    <form id="emailForm">
+        Email: <input type="text" id="email" /><br /><br /> <input type="submit" value="Submit" />
+        </form>
+        
+<script>
+    document.getElementById('emailForm').onsubmit = function () {
+var email = document.getElementById('email').value;
+var emailPattern = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+ if (!emailPattern.test(email)) {
+alert('Please enter a valid email address!');
+return false; // prevent form submission
+}
+};
+
+ </script>
+</body>
+</html>
